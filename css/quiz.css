@@ -18,6 +18,10 @@ nav {
     font-weight: bold;
 }
 
+#button-questions {
+    font-weight: bold;
+}
+
 .button {
     height:20px; 
     width:600px; 
@@ -28,10 +32,16 @@ nav {
     
 }
 
+.bovenKant {
+position: relative;
+
+}
+
 body {
 background-image: url(..//afbeeldingen/2560x1440-blue-abstract-noise-free-website-background-image.jpg);
 
 }
+
 
 
 
