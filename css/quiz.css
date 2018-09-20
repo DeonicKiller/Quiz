@@ -32,8 +32,10 @@ nav {
     
 }
 
-.bovenKant {
-position: relative;
+h1 {
+    color:red;
+    position: relative;
+
 
 }
 
