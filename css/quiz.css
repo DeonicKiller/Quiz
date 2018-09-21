@@ -1,9 +1,20 @@
 /* Plaats je CSS-code in dit bestand */
 
+.header {
+    background-color: rgba(34, 33, 33, 0.521);
+    text-align: center;
+    padding: 10px;
+}
+
+h1{
+color: red;
+}
+
+
+
 nav {
     margin-top: 1em;
     margin-bottom: 1em;
-    
 }
 
 .page {
@@ -29,19 +40,10 @@ nav {
     position:relative;
     top:50%; 
     left:35%;
-    
-}
-
-h1 {
-    color:red;
-    position: relative;
-
-
-}
+    }
 
 body {
-background-image: url(..//afbeeldingen/2560x1440-blue-abstract-noise-free-website-background-image.jpg);
-
+background-image: url(..//afbeeldingen/901.jpg);
 }
 
 
