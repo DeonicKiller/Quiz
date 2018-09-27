@@ -115,12 +115,22 @@ function keuze(nummer) {
 }
 var vraagElement = document.getElementById("vraag");
 var antwoordElement = document.getElementById("button-1");
-vraagElement.innerHTML = "Vraag 2";
-antwoordElement.innerHTML = "Nieuw antwoord";
+var vraagAndersElement = document.getElementById("vraagVerandering");
+vraagElement.innerHTML = "Vraag 2/20";
+antwoordElement.innerHTML = "Beschrijft het gedrag van websites";
+antwoord2Element.innerHTML = "Beschrijft de inhoud en structuur van websites";
+antwoord3Element.innerHTML = "Beschrijft de layout en stijl van websites";
+antwoord4Element.innerHTML = "Beschrijft het denken van de website";
+vraagAndersElement.innerHTML = "Waar gebruik je CSS voor?";
 }
 
-//Array
-var vragen = ["Waar gebruik je HTML voor?", "Waar gebruik je CSS voor", "Waar gebruik je JavaScript voor?"];
+
+
+//Array's
+/*var vragen = ["Waar gebruik je HTML voor?", "Waar gebruik je CSS voor?", "Waar gebruik je JavaScript voor?"], //Eerste lijst
+var antwoordLijst = [ "Beschrijft de inhoud en structuur van websites", "Beschrijft de layout en stijl van websites", "Beschrijft het gedrag van websites", "Beschrijft het denken van de website"]; //Tweede lijst*/
+
+
 
 
 

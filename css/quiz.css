@@ -13,11 +13,18 @@ color: red;
 h2{ 
 color: white;
 font-size:50px;
+text-align:left;
+text-shadow: 2px 2px 4px #000000;
+}
+
+#uitleg{
+    text-align: center;
 }
 
 p{
 color: white;
 font-size:30px;
+text-shadow: 2px 2px 4px #000000;
 }
 
 
@@ -29,18 +36,38 @@ nav {
 .page {
     border-width: 4px;
     border-color: red;
-    border-style: double;
+    border-style: solid;
     text-align: center;
-    
-
+    border-radius: 12px;
 }
 
 #button-start {
     font-weight: bold;
+    border-radius:12px;
+    border:2px solid darkblue;
+    background-color:rgb(34, 70, 71);
+    padding:10px;
+    color: white;
+    font-size: 20px;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px #1a1818;
+    margin: 10px;
 }
 
 #button-questions {
     font-weight: bold;
+    border-radius:12px;
+    border:2px solid darkblue;
+    background-color:rgb(34, 70, 71);
+    padding:10px;
+    color: white;
+    font-size: 20px;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px #1a1818;
+    margin: 10px;
+    
 }
 
 .button {
@@ -48,8 +75,7 @@ nav {
     width:600px; 
     margin: 10px; 
     position:relative;
-    /* top:50%; 
-    left:35%; */
+    
     border-radius:12px;
     border:2px solid darkblue;
     background-color:rgb(47, 34, 51);
@@ -57,25 +83,25 @@ nav {
     color: white;
     font-size: 20px;
     }
-.btn-width-wrapper{
+
+    .btn-width-wrapper{
     display:inline-block;
-    min-width:1400px;
-    /* width:1200px; */
-}
+    min-width:1400px;}
 
 body {
 background-image: url(..//afbeeldingen/901.jpg);
 }
 
-.vraag{
-font-size: 10px;
+.page1{
+    position:center;
+    color:rgb(141, 20, 20);
+    font-size:40px;
+    text-shadow: 2px 2px 8px rgb(0, 0, 0)
 }
 
-.vraagVerandering{
-    position:center;
-    color:rgb(117, 20, 20);
-    font-size:40px;
-}
+
+
+
 
 
 
