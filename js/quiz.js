@@ -6,10 +6,10 @@
 function addButtonActions() {
     var startButton = document.getElementById('button-start');
     var questionsButton = document.getElementById('button-questions');
-    var antwoordButtoneen = document.getElementById('button-1');
-    var antwoordButtontwee = document.getElementById('button-2');
-    var antwoordButtondrie = document.getElementById('button-3');
-    var antwoordButtonvier = document.getElementById('button-4');
+    var AntwoordButtoneen = document.getElementById('button-1');
+    var AntwoordButtontwee = document.getElementById('button-2');
+    var AntwoordButtondrie = document.getElementById('button-3');
+    var AntwoordButtonvier = document.getElementById('button-4');
 
     startButton.addEventListener("click", function () {
         showStartPage();
@@ -17,16 +17,16 @@ function addButtonActions() {
     questionsButton.addEventListener("click", function () {
         showQuestionsPage();
     });
-    antwoordButtoneen.addEventListener("click", function () {
+    AntwoordButtoneen.addEventListener("click", function () {
         showAntwoordPage();
     });
-    antwoordButtontwee.addEventListener("click", function () {
+    AntwoordButtontwee.addEventListener("click", function () {
         showWrongPage();
     });
-    antwoordButtondrie.addEventListener("click", function () {
+    AntwoordButtondrie.addEventListener("click", function () {
         showWrongPage();
     });
-    antwoordButtonvier.addEventListener("click", function () {
+    AntwoordButtonvier.addEventListener("click", function () {
         showWrongPage();
     });
 }
@@ -80,6 +80,7 @@ function showAntwoordPage(gegevenAntwoord) {
 
     page.style.display = 'block';
 
+    window.alert('je hebt het antwoord goed');
 }
 
 function showWrongPage() {
@@ -89,7 +90,9 @@ function showWrongPage() {
 
     page.style.display = 'block';
 
+    window.alert('je hebt het antwoord Fout');
 }
+
 
 //click installeren
 var  antwoordElement = document.getElementById('button-1');
@@ -129,6 +132,8 @@ vraagAndersElement.innerHTML = "Waar gebruik je CSS voor?";
 //Array's
 /*var vragen = ["Waar gebruik je HTML voor?", "Waar gebruik je CSS voor?", "Waar gebruik je JavaScript voor?"], //Eerste lijst
 var antwoordLijst = [ "Beschrijft de inhoud en structuur van websites", "Beschrijft de layout en stijl van websites", "Beschrijft het gedrag van websites", "Beschrijft het denken van de website"]; //Tweede lijst*/
+
+
 
 
 
