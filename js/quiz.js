@@ -120,7 +120,7 @@ antwoordElement.innerHTML = "Nieuw antwoord";
 }
 
 //Array
-
+var vragen = ["Waar gebruik je HTML voor?", "Waar gebruik je CSS voor", "Waar gebruik je JavaScript voor?"];
 
 
 
