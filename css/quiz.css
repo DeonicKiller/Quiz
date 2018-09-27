@@ -10,7 +10,6 @@ h1{
 color: red;
 }
 
-<<<<<<< HEAD
 h2{ 
 color: white;
 font-size:50px;
@@ -27,8 +26,6 @@ color: white;
 font-size:30px;
 text-shadow: 2px 2px 4px #000000;
 }
-=======
->>>>>>> parent of 9acf482... versie 1.3 Project
 
 
 nav {
@@ -39,15 +36,9 @@ nav {
 .page {
     border-width: 4px;
     border-color: red;
-<<<<<<< HEAD
     border-style: solid;
     text-align: center;
     border-radius: 12px;
-=======
-    border-style: double;
-    
-
->>>>>>> parent of 9acf482... versie 1.3 Project
 }
 
 #button-start {
@@ -84,7 +75,6 @@ nav {
     width:600px; 
     margin: 10px; 
     position:relative;
-<<<<<<< HEAD
     
     border-radius:12px;
     border:2px solid darkblue;
@@ -97,17 +87,11 @@ nav {
     .btn-width-wrapper{
     display:inline-block;
     min-width:1400px;}
-=======
-    top:50%; 
-    left:35%;
-    }
->>>>>>> parent of 9acf482... versie 1.3 Project
 
 body {
 background-image: url(..//afbeeldingen/901.jpg);
 }
 
-<<<<<<< HEAD
 .page1{
     position:center;
     color:rgb(141, 20, 20);
@@ -116,8 +100,6 @@ background-image: url(..//afbeeldingen/901.jpg);
 }
 
 
-=======
->>>>>>> parent of 9acf482... versie 1.3 Project
 
 
 
