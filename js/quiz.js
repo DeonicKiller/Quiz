@@ -116,26 +116,16 @@ function keuze(nummer) {
 var vraagElement = document.getElementById("vraag");
 var antwoordElement = document.getElementById("button-1");
 var vraagAndersElement = document.getElementById("vraagVerandering");
-vraagElement.innerHTML = "Vraag 2/20";
+vraagElement.innerHTML = (aantalVragen[1]);
 antwoordElement.innerHTML = (antwoordLijst[0]);
 antwoord2Element.innerHTML = (antwoordLijst[1]);
 antwoord3Element.innerHTML = (antwoordLijst[2]);
 antwoord4Element.innerHTML = (antwoordLijst[3]);
-vraagAndersElement.innerHTML = "Waar gebruik je CSS voor?";
+vraagAndersElement.innerHTML = (vragen[1])
 };
 
-var  antwoord5Element = document.getElementById('button-1');
-var  antwoord6Element = document.getElementById('button-2');
-var  antwoord7Element = document.getElementById('button-3');
-var  antwoord8Element = document.getElementById('button-4');
-antwoord5Element.addEventListener("click", function(){
-            keuze(1); });
-antwoord6Element.addEventListener("click", function(){
-            keuze(2); });
-antwoord7Element.addEventListener("click", function(){
-            keuze(3); });
-antwoord8Element.addEventListener("click", function(){
-            keuze(4); });
+
+
 
 
 
@@ -143,20 +133,7 @@ antwoord8Element.addEventListener("click", function(){
 //Array's
 var vragen = ["Waar gebruik je HTML voor?", "Waar gebruik je CSS voor?", "Waar gebruik je JavaScript voor?"] //Eerste lijst
 var antwoordLijst = ["Beschrijft de inhoud en structuur van websites", "Beschrijft de layout en stijl van websites", "Beschrijft het gedrag van websites", "Beschrijft het denken van de website"] //Tweede lijst
-/*var antwoord3Element = document.getElementById("button-3");
-var vraagAndersElement = document.getElementById("vraagVerandering");
-function keuze(nummer) {
-    if (nummer==1){
-    alert ("goed");
-}   else {
-    alert("fout")
-}
-antwoordElement.innerHTML = (antwoordLijst[0]);
-antwoord2Element.innerHTML = (antwoordLijst[1]); 
-antwoord3Element.innerHTML = (antwoordLijst[2]);
-antwoord4Element.innerHTML = (antwoordLijst[3]);
-vraagAndersElement.innerHTML = (vragen[2]);*/
-
+var aantalVragen = ["Vraag 1/20", "Vraag 2/20", "Vraag 3/20", "Vraag 4/20", "Vraag 5/20", "Vraag 6/20", "Vraag 7/20", "Vraag 8/20", "Vraag 9/20", "Vraag 10/20", "Vraag 11/20", "Vraag 12/20", "Vraag 13/20", "Vraag 14/20", "Vraag 15/20", "Vraag 16/20", "Vraag 17/20", "Vraag 18/20", "Vraag 19/20", "Vraag 20/20" ] //derde lijst
 
 
 
