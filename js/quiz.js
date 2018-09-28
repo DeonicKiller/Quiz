@@ -114,15 +114,18 @@ function keuze(nummer) {
     alert("fout")
 }
 var vraagElement = document.getElementById("vraag");
-var antwoordElement = document.getElementById("button-1");
 var vraagAndersElement = document.getElementById("vraagVerandering");
+
 vraagElement.innerHTML = (aantalVragen[1]);
-antwoordElement.innerHTML = (antwoordLijst[0]);
-antwoord2Element.innerHTML = (antwoordLijst[1]);
+antwoordElement.innerHTML = (antwoordLijst[3]);
+antwoord2Element.innerHTML = (antwoordLijst[0]);
 antwoord3Element.innerHTML = (antwoordLijst[2]);
-antwoord4Element.innerHTML = (antwoordLijst[3]);
+antwoord4Element.innerHTML = (antwoordLijst[1]);
 vraagAndersElement.innerHTML = (vragen[1])
 };
+
+
+
 
 
 
