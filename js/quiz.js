@@ -67,7 +67,6 @@ function showQuestionsPage() {
 
     page.style.display = 'block';
 
-    window.alert('Je bent nu op de vragenpagina');
 }
 
 /**
