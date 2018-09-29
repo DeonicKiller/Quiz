@@ -91,6 +91,9 @@ function showWrongPage() {
     page.style.display = 'block';
 
 }
+var i = 0;
+
+
 
 /**
  * Click installer
@@ -101,47 +104,66 @@ var antwoordButtondrie = document.getElementById('button-3');
 var antwoordButtonvier = document.getElementById('button-4');
 antwoordButtoneen.addEventListener("click", function(){
     keuze(1); });
-antwoordButtontwee.addEventListener("click", function(){
+    antwoordButtontwee.addEventListener("click", function(){
     keuze(2); });
-antwoordButtondrie.addEventListener("click", function(){
+    antwoordButtondrie.addEventListener("click", function(){
     keuze(3); });
-antwoordButtonvier.addEventListener("click", function(){
+    antwoordButtonvier.addEventListener("click", function(){
     keuze(4); });
-
-    
-
+            
 /**
- * Vraag veranderen plus vraag goed of fout
- */ 
-function keuze(nummer) {
-    if (nummer==1){
-    alert ("goed");
-}   else {
-    alert("fout")
-}
+ * Verplaatsen!!
+ */
 var vraagElement = document.getElementById("vraag");
 var vraagAndersElement = document.getElementById("vraagVerandering");
+var kies = [1, 2, 3, 4]
+var juiste = [0, 1, 0]
 
-/**
- * Vraag 2
- */
-vraagElement.innerHTML = (aantalVragen[1]);
-antwoordButtoneen.innerHTML = (antwoordLijst[3]);
-antwoordButtontwee.innerHTML = (antwoordLijst[0]);
-antwoordButtondrie.innerHTML = (antwoordLijst[2]);
-antwoordButtontwee.innerHTML = (antwoordLijst[1]);
-vraagAndersElement.innerHTML = (vragen[1])
-};
+
 
 /**
  * Array's
  */
-var vragen = ["Waar gebruik je HTML voor?", "Waar gebruik je CSS voor?", "Waar gebruik je JavaScript voor?"] //Eerste lijst
-var antwoordLijst = ["Beschrijft de inhoud en structuur van websites", "Beschrijft de layout en stijl van websites", "Beschrijft het gedrag van websites", "Beschrijft het denken van de website"] //Tweede lijst
+var vragen = ["Waar gebruik je HTML voor?", "Waar gebruik je CSS voor?", "Waar gebruik je JavaScript voor?"] //Lijst
+var antwoordLijst = [
+    ["Beschrijft de inhoud en structuur van websites", "Beschrijft de layout en stijl van websites", "Beschrijft het gedrag van websites", "Beschrijft het denken van de website"], //Eerste lijst
+    ["Beschrijft de inhoud en structuur van websites", "Beschrijft de layout en stijl van websites", "Beschrijft het gedrag van websites", "Beschrijft het denken van de website"], //Tweede lijst
+    ["test1", "test2", "test3", "test4"]
+]; 
+ 
 var aantalVragen = ["Vraag 1/20", "Vraag 2/20", "Vraag 3/20", "Vraag 4/20", "Vraag 5/20", "Vraag 6/20", "Vraag 7/20", "Vraag 8/20", "Vraag 9/20", "Vraag 10/20", "Vraag 11/20", "Vraag 12/20", "Vraag 13/20", "Vraag 14/20", "Vraag 15/20", "Vraag 16/20", "Vraag 17/20", "Vraag 18/20", "Vraag 19/20", "Vraag 20/20" ] //derde lijst
+var answer = ["Beschrijft de inhoud en structuur van websites", "Beschrijft de layout en stijl van websites"] //Juiste antwoorden
+
+/**
+ * Vraag 2
+ */
+
+function antwoord() {
+vraagElement.innerHTML = (aantalVragen[i]);
+antwoordButtoneen.innerHTML = (antwoordLijst[i] [0]);
+antwoordButtontwee.innerHTML = (antwoordLijst[i] [1]);
+antwoordButtondrie.innerHTML = (antwoordLijst[i] [2]);
+antwoordButtonvier.innerHTML = (antwoordLijst[i] [3]);
+vraagAndersElement.innerHTML = (vragen[i])
+}
+/**
+ * Vraag veranderen plus vraag goed of fout
+ */ 
+function keuze(nummer) {
+    if (nummer==kies[juiste[i]]){
+        alert ("goed");
+    i = i +1;
+    antwoord();
+}   else {
+    alert("fout");
+    i = i +1;
+    antwoord();
+}
+};
 
 /**
  * Intialize
  */
 addButtonActions();
 showStartPage();
+antwoord();
