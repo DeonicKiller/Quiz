@@ -31,8 +31,6 @@ function addButtonActions() {
     });
 }
 
-
-
 /**
  * Hide all pages
  */
@@ -93,8 +91,6 @@ function showWrongPage() {
 }
 var i = 0;
 
-
-
 /**
  * Click installer
  */
@@ -112,14 +108,12 @@ antwoordButtoneen.addEventListener("click", function(){
     keuze(4); });
             
 /**
- * Verplaatsen!!
+ * Keuze welke goed is
  */
 var vraagElement = document.getElementById("vraag");
 var vraagAndersElement = document.getElementById("vraagVerandering");
 var kies = [1, 2, 3, 4]
 var juiste = [0, 1, 0]
-
-
 
 /**
  * Array's
@@ -137,7 +131,6 @@ var answer = ["Beschrijft de inhoud en structuur van websites", "Beschrijft de l
 /**
  * Vraag 2
  */
-
 function antwoord() {
 vraagElement.innerHTML = (aantalVragen[i]);
 antwoordButtoneen.innerHTML = (antwoordLijst[i] [0]);
@@ -146,6 +139,7 @@ antwoordButtondrie.innerHTML = (antwoordLijst[i] [2]);
 antwoordButtonvier.innerHTML = (antwoordLijst[i] [3]);
 vraagAndersElement.innerHTML = (vragen[i])
 }
+
 /**
  * Vraag veranderen plus vraag goed of fout
  */ 
