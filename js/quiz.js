@@ -80,7 +80,9 @@ function showAntwoordPage() {
     page.style.display = 'block';
 
 }
-
+/**
+ * Show Wrong Page
+ */
 function showWrongPage() {
     var page = document.getElementById('page-Antwoord');
     
@@ -90,7 +92,9 @@ function showWrongPage() {
 
 }
 
-//click installeren
+/**
+ * Click installer
+ */
 var antwoordButtoneen = document.getElementById('button-1');
 var antwoordButtontwee = document.getElementById('button-2');
 var antwoordButtondrie = document.getElementById('button-3');
@@ -106,7 +110,9 @@ antwoordButtonvier.addEventListener("click", function(){
 
     
 
-//Vraag veranderen plus vraag goed of fout
+/**
+ * Vraag veranderen plus vraag goed of fout
+ */ 
 function keuze(nummer) {
     if (nummer==1){
     alert ("goed");
@@ -116,6 +122,9 @@ function keuze(nummer) {
 var vraagElement = document.getElementById("vraag");
 var vraagAndersElement = document.getElementById("vraagVerandering");
 
+/**
+ * Vraag 2
+ */
 vraagElement.innerHTML = (aantalVragen[1]);
 antwoordButtoneen.innerHTML = (antwoordLijst[3]);
 antwoordButtontwee.innerHTML = (antwoordLijst[0]);
@@ -124,24 +133,15 @@ antwoordButtontwee.innerHTML = (antwoordLijst[1]);
 vraagAndersElement.innerHTML = (vragen[1])
 };
 
-
-
-
-
-
-
-
-
-
-//Array's
+/**
+ * Array's
+ */
 var vragen = ["Waar gebruik je HTML voor?", "Waar gebruik je CSS voor?", "Waar gebruik je JavaScript voor?"] //Eerste lijst
 var antwoordLijst = ["Beschrijft de inhoud en structuur van websites", "Beschrijft de layout en stijl van websites", "Beschrijft het gedrag van websites", "Beschrijft het denken van de website"] //Tweede lijst
 var aantalVragen = ["Vraag 1/20", "Vraag 2/20", "Vraag 3/20", "Vraag 4/20", "Vraag 5/20", "Vraag 6/20", "Vraag 7/20", "Vraag 8/20", "Vraag 9/20", "Vraag 10/20", "Vraag 11/20", "Vraag 12/20", "Vraag 13/20", "Vraag 14/20", "Vraag 15/20", "Vraag 16/20", "Vraag 17/20", "Vraag 18/20", "Vraag 19/20", "Vraag 20/20" ] //derde lijst
 
-
-
-
-
-// Initialize
+/**
+ * Intialize
+ */
 addButtonActions();
 showStartPage();
