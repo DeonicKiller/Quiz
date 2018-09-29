@@ -72,7 +72,7 @@ function showQuestionsPage() {
 /**
  * Show Antwoord page
  */
-function showAntwoordPage(gegevenAntwoord) {
+function showAntwoordPage() {
     var page = document.getElementById('page-Antwoord');
     
     hideAllPages();
@@ -91,18 +91,19 @@ function showWrongPage() {
 }
 
 //click installeren
-var  antwoordElement = document.getElementById('button-1');
-var  antwoord2Element = document.getElementById('button-2');
-var  antwoord3Element = document.getElementById('button-3');
-var  antwoord4Element = document.getElementById('button-4');
-antwoordElement.addEventListener("click", function(){
-            keuze(1); });
-antwoord2Element.addEventListener("click", function(){
-            keuze(2); });
-antwoord3Element.addEventListener("click", function(){
-            keuze(3); });
-antwoord4Element.addEventListener("click", function(){
-            keuze(4); });
+var antwoordButtoneen = document.getElementById('button-1');
+var antwoordButtontwee = document.getElementById('button-2');
+var antwoordButtondrie = document.getElementById('button-3');
+var antwoordButtonvier = document.getElementById('button-4');
+antwoordButtoneen.addEventListener("click", function(){
+    keuze(1); });
+antwoordButtontwee.addEventListener("click", function(){
+    keuze(2); });
+antwoordButtondrie.addEventListener("click", function(){
+    keuze(3); });
+antwoordButtonvier.addEventListener("click", function(){
+    keuze(4); });
+
     
 
 //Vraag veranderen plus vraag goed of fout
@@ -116,10 +117,10 @@ var vraagElement = document.getElementById("vraag");
 var vraagAndersElement = document.getElementById("vraagVerandering");
 
 vraagElement.innerHTML = (aantalVragen[1]);
-antwoordElement.innerHTML = (antwoordLijst[3]);
-antwoord2Element.innerHTML = (antwoordLijst[0]);
-antwoord3Element.innerHTML = (antwoordLijst[2]);
-antwoord4Element.innerHTML = (antwoordLijst[1]);
+antwoordButtoneen.innerHTML = (antwoordLijst[3]);
+antwoordButtontwee.innerHTML = (antwoordLijst[0]);
+antwoordButtondrie.innerHTML = (antwoordLijst[2]);
+antwoordButtontwee.innerHTML = (antwoordLijst[1]);
 vraagAndersElement.innerHTML = (vragen[1])
 };
 
