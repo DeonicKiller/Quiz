@@ -95,7 +95,7 @@ var i = 0;
  * Click installer
  */
 var antwoordButtoneen = document.getElementById('button-1');
-var antwoordButtontwee = document.getElementById('button-2');
+var antwoordButtontwee = document.getElementById('button-2');// Hoe kan ik dit vervangen?
 var antwoordButtondrie = document.getElementById('button-3');
 var antwoordButtonvier = document.getElementById('button-4');
 antwoordButtoneen.addEventListener("click", function(){
@@ -112,8 +112,8 @@ antwoordButtoneen.addEventListener("click", function(){
  */
 var vraagElement = document.getElementById("vraag");
 var vraagAndersElement = document.getElementById("vraagVerandering");
-var kies = [1, 2, 3, 4]
-var juiste = [0, 1, 0]
+var kies = [1, 2, 3, 4];
+var juiste = [0, 1, 0];
 
 /**
  * Array's
@@ -121,7 +121,7 @@ var juiste = [0, 1, 0]
 var vragen = ["Waar gebruik je HTML voor?", "Waar gebruik je CSS voor?", "Waar gebruik je JavaScript voor?"] //Lijst
 var antwoordLijst = [
     ["Beschrijft de inhoud en structuur van websites", "Beschrijft de layout en stijl van websites", "Beschrijft het gedrag van websites", "Beschrijft het denken van de website"], //Eerste lijst
-    ["Beschrijft de inhoud en structuur van websites", "Beschrijft de layout en stijl van websites", "Beschrijft het gedrag van websites", "Beschrijft het denken van de website"], //Tweede lijst
+    ["Beschrijft de inhoud en structuur van websites", "Beschrijft de layout en stijl van websites", "Beschrijft de gevoelens van de website", "Beschrijft de emoties van de website"], //Tweede lijst
     ["test1", "test2", "test3", "test4"]
 ]; 
  
