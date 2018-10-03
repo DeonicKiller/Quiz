@@ -137,7 +137,7 @@ function antwoord() {
     */ 
 function keuze(nummer) {
     if (nummer==kies[juiste[i]]){
-    /*alert ("goed");*/
+    alert ("goed");
     i = i +1;
     score = score +1;
     antwoord();}   
