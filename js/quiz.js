@@ -101,7 +101,7 @@ function showAntwoordPage() {
 ]; 
                 
     var aantalVragen = ["Vraag 1/20", "Vraag 2/20", "Vraag 3/20", "Vraag 4/20", "Vraag 5/20", "Vraag 6/20", "Vraag 7/20", "Vraag 8/20", "Vraag 9/20", "Vraag 10/20", "Vraag 11/20", "Vraag 12/20", "Vraag 13/20", "Vraag 14/20", "Vraag 15/20", "Vraag 16/20", "Vraag 17/20", "Vraag 18/20", "Vraag 19/20", "Vraag 20/20" ]; //derde lijst
-                
+      
                 
     /**
     * Verandering van alles op de vragen pagina
@@ -135,7 +135,15 @@ function keuze(nummer) {
     score +=0;
     antwoord();}
 }
-                
+
+if (aantalVragen.length > 20) aantalVragen.length = 20;
+function showresultatenPage() {
+    var page = document.getElementById('page-Resultaten');
+    
+    hideAllPages();
+
+    page.style.display = 'block';
+};    
     /**
     * Intialize
     */
