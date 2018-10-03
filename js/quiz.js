@@ -111,17 +111,18 @@ function showWrongPage() {
     var vraagAndersElement = document.getElementById("vraagVerandering");
     var scoreElement = document.getElementById("scoreQuiz");
     var kies = [1, 2, 3, 4];
-    var juiste = [0, 1, 0];
+    var juiste = [0, 1, 3];
     var i = 0;
     var score =0;
                 
     /**
     * Array's
     */
-    var vragen = ["Waar gebruik je HTML voor?", "Waar gebruik je CSS voor?", "Waar gebruik je JavaScript voor?",]; //Lijst
+    var vragen = ["Waar gebruik je HTML voor?", "Waar gebruik je CSS voor?", "Waar gebruik je JavaScript voor?", "test"]; //Lijst
     var antwoordLijst = [
                     ["Beschrijft de inhoud en structuur van websites", "Beschrijft de layout en stijl van websites", "Beschrijft het gedrag van websites", "Beschrijft het denken van de website"], //Eerste lijst
                     ["Beschrijft de inhoud en structuur van websites", "Beschrijft de layout en stijl van websites", "Beschrijft de gevoelens van de website", "Beschrijft de emoties van de website"], //Tweede lijst
+                    ["Vernietigd gegevens", "Pusht gegevens", "Onthoud gegevens", "Beschrijft het gedrag van websites"],
                     ["test1", "test2", "test3", "test4"]
 ]; 
                 
@@ -129,7 +130,7 @@ function showWrongPage() {
                 
                 
     /**
-    * Vraag 2
+    * Verandering van alles op de vragen pagina
     */
 function antwoord() {
     vraagElement.innerHTML = (aantalVragen[i]);

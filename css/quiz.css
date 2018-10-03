@@ -7,14 +7,14 @@
 }
 
 h1{
-color: red;
+    color: red;
 }
 
 h2{ 
-color: white;
-font-size:50px;
-text-align:left;
-text-shadow: 2px 2px 4px #000000;
+    color: white;
+    font-size:50px;
+    text-align:left;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 #uitleg{
@@ -22,9 +22,9 @@ text-shadow: 2px 2px 4px #000000;
 }
 
 p{
-color: white;
-font-size:30px;
-text-shadow: 2px 2px 4px #000000;
+    color: white;
+    font-size:30px;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 
@@ -89,7 +89,7 @@ nav {
     min-width:1400px;}
 
 body {
-background-image: url(..//afbeeldingen/901.jpg);
+    background-image: url(..//afbeeldingen/901.jpg);
 }
 
 .page1{
