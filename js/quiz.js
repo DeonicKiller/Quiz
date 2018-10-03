@@ -35,9 +35,11 @@ function addButtonActions() {
 function hideAllPages() {
     var startPage = document.getElementById('page-start');
     var AntwoordPage = document.getElementById('page-Antwoord');
+    var ResultatenPage = document. getElementById('page-Resultaten')
    
     startPage.style.display = 'none';   
     AntwoordPage.style.display = 'none';
+    ResultatenPage.style.display ='none';
 }
 
 /**
@@ -67,8 +69,8 @@ function showAntwoordPage() {
 /**
  * Show Resultaten Page
  */
-/*function showWrongPage() {
-    var page = document.getElementById('page-Antwoord');
+/*function showresultatenPage() {
+    var page = document.getElementById('page-Resultaten');
     
     hideAllPages();
 
