@@ -85,19 +85,31 @@ function showAntwoordPage() {
     var vraagAndersElement = document.getElementById("vraagVerandering");
     var scoreElement = document.getElementById("scoreQuiz");
     var kies = [1, 2, 3, 4];
-    var juiste = [0, 1, 3];
+    var juiste = [0, 1, 3, 2, 3, 1, 1, 3, 0, 0, 2, 3, 1 ];
     var i = 0;
     var score =0;
                 
     /**
     * Array's
     */
-    var vragen = ["Waar gebruik je HTML voor?", "Waar gebruik je CSS voor?", "Waar gebruik je JavaScript voor?", "test"]; //Lijst
+    var vragen = ["Waar gebruik je HTML voor?", "Waar gebruik je CSS voor?", "Waar gebruik je JavaScript voor?", "Hoe kopieer je een geselecteerde tekst?", "Hoe plak je een tekst?", 
+    "Hoe verander je de tekst kleur?", "Hoe undo je een actie?", "Hoe redo je een actie?", "Hoe knip je een actie weg?", "Welke button position is gebruikt voor deze quiz?", 
+    "Hoe vaak kan je dezelfde var naam gebruiken", "Hoe verhoog je een var = 0?", "Waar gebruik je een div voor?" ]; //Lijst
     var antwoordLijst = [
                     ["Beschrijft de inhoud en structuur van websites", "Beschrijft de layout en stijl van websites", "Beschrijft het gedrag van websites", "Beschrijft het denken van de website"], //Eerste lijst
                     ["Beschrijft de inhoud en structuur van websites", "Beschrijft de layout en stijl van websites", "Beschrijft de gevoelens van de website", "Beschrijft de emoties van de website"], //Tweede lijst
                     ["Vernietigd gegevens", "Pusht gegevens", "Onthoud gegevens", "Beschrijft het gedrag van websites"],
-                    ["test1", "test2", "test3", "test4"]
+                    ["Crtl-n", "Ctrl-x", "Ctrl-c", "Ctrl-y"],
+                    ["Ctrl-p", "Ctrl-o", "Ctrl-q", "Ctrl-v"],
+                    ["Text-color:", "Color:", "Align", "Text"],
+                    ["Ctrl-m", "Ctrl-z", "Ctrl-e", "Ctrl-k"],
+                    ["Ctrl-r", "Ctrl-h", "Ctrl-a", "Ctrl-y"],
+                    ["Ctrl-x", "Ctrl-u", "ctrl-s", "Ctrl-2"],
+                    ["Relative", "Sticky", "Fixed", "Absolute"],
+                    ["10 keer", "Zo veel keer als je wilt", "1 keer", "2 keer"],
+                    ["--", "==", "//", "++"],
+                    ["Om text te schrijven", "Om een pagina te maken", "Om een Element op te halen", "Om een counter toe te voegen"]
+
 ]; 
                 
     var aantalVragen = ["Vraag 1/20", "Vraag 2/20", "Vraag 3/20", "Vraag 4/20", "Vraag 5/20", "Vraag 6/20", "Vraag 7/20", "Vraag 8/20", "Vraag 9/20", "Vraag 10/20", "Vraag 11/20", "Vraag 12/20", "Vraag 13/20", "Vraag 14/20", "Vraag 15/20", "Vraag 16/20", "Vraag 17/20", "Vraag 18/20", "Vraag 19/20", "Vraag 20/20" ]; //derde lijst
@@ -125,14 +137,14 @@ function antwoord() {
     */ 
 function keuze(nummer) {
     if (nummer==kies[juiste[i]]){
-    alert ("goed");
+    /*alert ("goed");*/
     i = i +1;
-    score +=1;
+    score = score +1;
     antwoord();}   
     else {
     alert("fout");
     i = i +1;
-    score +=0;
+    score = score +0;
     antwoord();}
 }
 
