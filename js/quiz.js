@@ -109,14 +109,16 @@ function showWrongPage() {
     */
     var vraagElement = document.getElementById("vraag");
     var vraagAndersElement = document.getElementById("vraagVerandering");
+    var scoreElement = document.getElementById("scoreQuiz");
     var kies = [1, 2, 3, 4];
     var juiste = [0, 1, 0];
     var i = 0;
+    var score =0;
                 
     /**
     * Array's
     */
-    var vragen = ["Waar gebruik je HTML voor?", "Waar gebruik je CSS voor?", "Waar gebruik je JavaScript voor?"]; //Lijst
+    var vragen = ["Waar gebruik je HTML voor?", "Waar gebruik je CSS voor?", "Waar gebruik je JavaScript voor?",]; //Lijst
     var antwoordLijst = [
                     ["Beschrijft de inhoud en structuur van websites", "Beschrijft de layout en stijl van websites", "Beschrijft het gedrag van websites", "Beschrijft het denken van de website"], //Eerste lijst
                     ["Beschrijft de inhoud en structuur van websites", "Beschrijft de layout en stijl van websites", "Beschrijft de gevoelens van de website", "Beschrijft de emoties van de website"], //Tweede lijst
@@ -136,6 +138,7 @@ function antwoord() {
     antwoordButtondrie.innerHTML = (antwoordLijst[i] [2]);
     antwoordButtonvier.innerHTML = (antwoordLijst[i] [3]);
     vraagAndersElement.innerHTML = (vragen[i]);
+    scoreElement.innerHTML = (score);
 }
                 
     /**
@@ -145,10 +148,12 @@ function keuze(nummer) {
     if (nummer==kies[juiste[i]]){
     alert ("goed");
     i = i +1;
+    score +=1;
     antwoord();}   
     else {
     alert("fout");
     i = i +1;
+    score +=0;
     antwoord();}
 }
                 
