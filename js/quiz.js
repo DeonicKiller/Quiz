@@ -13,19 +13,19 @@ function addButtonActions() {
         showStartPage();
     });
     questionsButton.addEventListener("click", function () {
-        showQuestionsPage();
-    });
-    antwoordButtoneen.addEventListener("click", function () {
         showAntwoordPage();
     });
+    antwoordButtoneen.addEventListener("click", function () {
+        keuze(1);
+    });
     antwoordButtontwee.addEventListener("click", function () {
-        showWrongPage();
+        keuze(2);
     });
     antwoordButtondrie.addEventListener("click", function () {
-        showWrongPage();
+        keuze(3);
     });
     antwoordButtonvier.addEventListener("click", function () {
-        showWrongPage();
+        keuze(4);
     });
 }
 
@@ -54,18 +54,6 @@ function showStartPage() {
 }
 
 /**
- * Show questions page
- */
-function showQuestionsPage() {
-    var page = document.getElementById('page-Antwoord');
-    
-    hideAllPages();
-
-    page.style.display = 'block';
-
-}
-
-/**
  * Show Antwoord page
  */
 function showAntwoordPage() {
@@ -77,33 +65,17 @@ function showAntwoordPage() {
 
 }
 /**
- * Show Wrong Page
+ * Show Resultaten Page
  */
-function showWrongPage() {
+/*function showWrongPage() {
     var page = document.getElementById('page-Antwoord');
     
     hideAllPages();
 
     page.style.display = 'block';
 
-}
+}*/
 
-/**
- * Click installer
- */
-    var antwoordButtoneen = document.getElementById('button-1');
-    var antwoordButtontwee = document.getElementById('button-2');// Hoe kan ik dit vervangen?
-    var antwoordButtondrie = document.getElementById('button-3');
-    var antwoordButtonvier = document.getElementById('button-4');
-    antwoordButtoneen.addEventListener("click", function(){
-    keuze(1); });
-    antwoordButtontwee.addEventListener("click", function(){
-    keuze(2); });
-    antwoordButtondrie.addEventListener("click", function(){
-    keuze(3); });
-    antwoordButtonvier.addEventListener("click", function(){
-    keuze(4); });
-                
     /**
     * Antwoorden
     */
@@ -133,6 +105,10 @@ function showWrongPage() {
     * Verandering van alles op de vragen pagina
     */
 function antwoord() {
+    var antwoordButtoneen = document.getElementById('button-1');
+    var antwoordButtontwee = document.getElementById('button-2');
+    var antwoordButtondrie = document.getElementById('button-3');
+    var antwoordButtonvier = document.getElementById('button-4');
     vraagElement.innerHTML = (aantalVragen[i]);
     antwoordButtoneen.innerHTML = (antwoordLijst[i] [0]);
     antwoordButtontwee.innerHTML = (antwoordLijst[i] [1]);
@@ -143,7 +119,7 @@ function antwoord() {
 }
                 
     /**
-    * Vraag veranderen plus vraag goed of fout
+    * Vraag goed of fout
     */ 
 function keuze(nummer) {
     if (nummer==kies[juiste[i]]){
