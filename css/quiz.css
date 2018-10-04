@@ -33,7 +33,6 @@ p{
     color: white;
     font-size:30px;
     text-shadow: 2px 2px 4px #000000;
-    margin-bottom: 0px;
 }
 
 
@@ -71,13 +70,11 @@ nav {
     border-top: hidden;
     border-bottom: hidden;
     background-color:rgba(34, 70, 71, 0);
-    padding:10px;
-    color: white;
-    font-size: 20px;
+    color: rgb(131, 32, 37);
+    font-size: 40px;
     padding: 10px;
-    box-shadow: 5px 10px #1a1818;
-    margin: 10px;
-    
+    margin-top: 0px;
+    margin-bottom: 20px;
 }
 
 .button {
@@ -95,7 +92,7 @@ nav {
     font-size: 20px;
     }
 
-    .btn-width-wrapper{
+.btn-width-wrapper{
     display:inline-block;
     width:1400px;
     max-width: 100%;

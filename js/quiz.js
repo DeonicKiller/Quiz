@@ -1,4 +1,35 @@
 /**
+ * Add actions to page buttons 
+ */
+function addButtonActions() {
+    var startButton = document.getElementById('button-start');
+    var questionsButton = document.getElementById('button-questions');
+    var antwoordButtoneen = document.getElementById('button-1');
+    var antwoordButtontwee = document.getElementById('button-2');
+    var antwoordButtondrie = document.getElementById('button-3');
+    var antwoordButtonvier = document.getElementById('button-4');
+
+    startButton.addEventListener("click", function () {
+        showStartPage();
+    });
+    questionsButton.addEventListener("click", function () {
+        showAntwoordPage();
+    });
+    antwoordButtoneen.addEventListener("click", function () {
+        keuze(1);
+    });
+    antwoordButtontwee.addEventListener("click", function () {
+        keuze(2);
+    });
+    antwoordButtondrie.addEventListener("click", function () {
+        keuze(3);
+    });
+    antwoordButtonvier.addEventListener("click", function () {
+        keuze(4);
+    });
+}
+
+/**
 * Vraag goed of fout
 */ 
 function keuze(nummer) {
@@ -28,37 +59,6 @@ function keuze(nummer) {
         antwoord();   
     } 
    
-}
-
-/**
- * Add actions to page buttons 
- */
-function addButtonActions() {
-    var startButton = document.getElementById('button-start');
-    var questionsButton = document.getElementById('button-questions');
-    var antwoordButtoneen = document.getElementById('button-1');
-    var antwoordButtontwee = document.getElementById('button-2');
-    var antwoordButtondrie = document.getElementById('button-3');
-    var antwoordButtonvier = document.getElementById('button-4');
-
-    startButton.addEventListener("click", function () {
-        showStartPage();
-    });
-    questionsButton.addEventListener("click", function () {
-        showAntwoordPage();
-    });
-    antwoordButtoneen.addEventListener("click", function () {
-        keuze(1);
-    });
-    antwoordButtontwee.addEventListener("click", function () {
-        keuze(2);
-    });
-    antwoordButtondrie.addEventListener("click", function () {
-        keuze(3);
-    });
-    antwoordButtonvier.addEventListener("click", function () {
-        keuze(4);
-    });
 }
 
 /**
