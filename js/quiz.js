@@ -120,11 +120,10 @@ var antwoordLijst = [
                     ["*// */", "**/ */", "/** */", "*/ //*"],
                     ["<DOCTYPE html>", "<!DOCTYPE html>", "<!!DOCTYPE html>", "<DOCTYPE html !>"]
 
-]; /** */
+]; 
                 
-var aantalVragen = ["Vraag 1/20", "Vraag 2/20", "Vraag 3/20", "Vraag 4/20", "Vraag 5/20", "Vraag 6/20", "Vraag 7/20", "Vraag 8/20", "Vraag 9/20", "Vraag 10/20", "Vraag 11/20", "Vraag 12/20", "Vraag 13/20", "Vraag 14/20", "Vraag 15/20", "Vraag 16/20", "Vraag 17/20", "Vraag 18/20", "Vraag 19/20", "Vraag 20/20" ]; //derde lijst
+var aantalVragen = ["Vraag 1/20", "Vraag 2/20", "Vraag 3/20", "Vraag 4/20", "Vraag 5/20", "Vraag 6/20", "Vraag 7/20", "Vraag 8/20", "Vraag 9/20", "Vraag 10/20", "Vraag 11/20", "Vraag 12/20", "Vraag 13/20", "Vraag 14/20", "Vraag 15/20", "Vraag 16/20", "Vraag 17/20", "Vraag 18/20", "Vraag 19/20", "Vraag 20/20"]; //derde lijst
       
-                
 /**
 * Verandering van alles op de vragen pagina
 */
@@ -154,19 +153,23 @@ function keuze(nummer) {
         score = score +0;
     }
 
+
     // checken of het nu 21 wordt, bij nee  onderste 2, bij ja zet je vari
 
-    /*if (aantalVragen.length > i) aantalVragen.length = 20;
-    function showresultatenPage() {
+    if (aantalVragen.length < i) { 
+        
         var page = document.getElementById('page-Resultaten');
         
         hideAllPages();
     
-        page.style.display = 'none';
-    }  */
+        page.style.display = 'block';
 
-    i = i + 1;
-    antwoord();
+    }  else {
+        i = i + 1;
+        antwoord();   
+    } 
+
+   
 }
 
 /**
