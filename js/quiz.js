@@ -35,7 +35,7 @@ function addButtonActions() {
 function hideAllPages() {
     var startPage = document.getElementById('page-start');
     var AntwoordPage = document.getElementById('page-Antwoord');
-    var ResultatenPage = document. getElementById('page-Resultaten')
+    var ResultatenPage = document. getElementById('page-Resultaten');
    
     startPage.style.display = 'none';   
     AntwoordPage.style.display = 'none';
@@ -78,24 +78,27 @@ function showAntwoordPage() {
 
 }*/
 
-    /**
-    * Antwoorden
-    */
-    var vraagElement = document.getElementById("vraag");
-    var vraagAndersElement = document.getElementById("vraagVerandering");
-    var scoreElement = document.getElementById("scoreQuiz");
-    var kies = [1, 2, 3, 4];
-    var juiste = [0, 1, 3, 2, 3, 1, 1, 3, 0, 0, 2, 3, 1 ];
-    var i = 0;
-    var score =0;
+/**
+* Antwoorden
+*/
+var vraagElement = document.getElementById("vraag");
+var vraagAndersElement = document.getElementById("vraagVerandering");
+var scoreElement = document.getElementById("scoreQuiz");
+var kies = [1, 2, 3, 4];
+var juiste = [0, 1, 3, 2, 3, 1, 1, 3, 0, 0, 2, 3, 1, 0, 2, 3, 0, 1, 2, 1  ];
+var i = 0;
+var score =0;
                 
-    /**
-    * Array's
-    */
-    var vragen = ["Waar gebruik je HTML voor?", "Waar gebruik je CSS voor?", "Waar gebruik je JavaScript voor?", "Hoe kopieer je een geselecteerde tekst?", "Hoe plak je een tekst?", 
+/**
+* Array's
+*/
+var vragen = ["Waar gebruik je HTML voor?", "Waar gebruik je CSS voor?", "Waar gebruik je JavaScript voor?", "Hoe kopieer je een geselecteerde tekst?", "Hoe plak je een tekst?", 
     "Hoe verander je de tekst kleur?", "Hoe undo je een actie?", "Hoe redo je een actie?", "Hoe knip je een actie weg?", "Welke button position is gebruikt voor deze quiz?", 
-    "Hoe vaak kan je dezelfde var naam gebruiken", "Hoe verhoog je een var = 0?", "Waar gebruik je een div voor?" ]; //Lijst
-    var antwoordLijst = [
+    "Hoe vaak kan je dezelfde var naam gebruiken?", "Hoe verhoog je een var = 0?", "Waar gebruik je een div voor?", "Hoe align je een tekst?", "Hoe maak je een header tag?",
+    "Hoe maak je een array?", "Waar staat html voor?", "Waar gebruik je margin voor?", "Hoe voeg je comments toe in JavaScript?", "Hoe begin je een HTML document?"]; 
+ 
+ //Lijst
+var antwoordLijst = [
                     ["Beschrijft de inhoud en structuur van websites", "Beschrijft de layout en stijl van websites", "Beschrijft het gedrag van websites", "Beschrijft het denken van de website"], //Eerste lijst
                     ["Beschrijft de inhoud en structuur van websites", "Beschrijft de layout en stijl van websites", "Beschrijft de gevoelens van de website", "Beschrijft de emoties van de website"], //Tweede lijst
                     ["Vernietigd gegevens", "Pusht gegevens", "Onthoud gegevens", "Beschrijft het gedrag van websites"],
@@ -108,16 +111,23 @@ function showAntwoordPage() {
                     ["Relative", "Sticky", "Fixed", "Absolute"],
                     ["10 keer", "Zo veel keer als je wilt", "1 keer", "2 keer"],
                     ["--", "==", "//", "++"],
-                    ["Om text te schrijven", "Om een pagina te maken", "Om een Element op te halen", "Om een counter toe te voegen"]
+                    ["Om text te schrijven", "Om een pagina te maken", "Om een Element op te halen", "Om een counter toe te voegen"],
+                    ["Text-align", "Align-text", "Text", "Align"],
+                    ["Header", "tag", "h1", "p1"],
+                    ["Var naam ={}", "Naam var = {}", "{} Naam = var", "Var naam = []"],
+                    ["Hyper Text Markup Language", "Hyper Text Margin Language", "Hyper Text Markup Life", "Hyper Test Language"],
+                    ["Om ruimte te creëren in de echte wereld", "Om ruimte te creëren rond om de elementen", "Om ruimte weg te halen", "Om elementen te creëren"],
+                    ["*// */", "**/ */", "/** */", "*/ //*"],
+                    ["<DOCTYPE html>", "<!DOCTYPE html>", "<!!DOCTYPE html>", "<DOCTYPE html !>"]
 
-]; 
+]; /** */
                 
-    var aantalVragen = ["Vraag 1/20", "Vraag 2/20", "Vraag 3/20", "Vraag 4/20", "Vraag 5/20", "Vraag 6/20", "Vraag 7/20", "Vraag 8/20", "Vraag 9/20", "Vraag 10/20", "Vraag 11/20", "Vraag 12/20", "Vraag 13/20", "Vraag 14/20", "Vraag 15/20", "Vraag 16/20", "Vraag 17/20", "Vraag 18/20", "Vraag 19/20", "Vraag 20/20" ]; //derde lijst
+var aantalVragen = ["Vraag 1/20", "Vraag 2/20", "Vraag 3/20", "Vraag 4/20", "Vraag 5/20", "Vraag 6/20", "Vraag 7/20", "Vraag 8/20", "Vraag 9/20", "Vraag 10/20", "Vraag 11/20", "Vraag 12/20", "Vraag 13/20", "Vraag 14/20", "Vraag 15/20", "Vraag 16/20", "Vraag 17/20", "Vraag 18/20", "Vraag 19/20", "Vraag 20/20" ]; //derde lijst
       
                 
-    /**
-    * Verandering van alles op de vragen pagina
-    */
+/**
+* Verandering van alles op de vragen pagina
+*/
 function antwoord() {
     var antwoordButtoneen = document.getElementById('button-1');
     var antwoordButtontwee = document.getElementById('button-2');
@@ -132,33 +142,36 @@ function antwoord() {
     scoreElement.innerHTML = (score);
 }
                 
-    /**
-    * Vraag goed of fout
-    */ 
+/**
+* Vraag goed of fout
+*/ 
 function keuze(nummer) {
-    if (nummer==kies[juiste[i]]){
-    alert ("goed");
-    i = i +1;
-    score = score +1;
-    antwoord();}   
-    else {
-    alert("fout");
-    i = i +1;
-    score = score +0;
-    antwoord();}
+    if (nummer==kies[juiste[i]]) {
+        alert ("goed");
+        score = score +1;
+    } else {
+        alert("fout");
+        score = score +0;
+    }
+
+    // checken of het nu 21 wordt, bij nee  onderste 2, bij ja zet je vari
+
+    /*if (aantalVragen.length > i) aantalVragen.length = 20;
+    function showresultatenPage() {
+        var page = document.getElementById('page-Resultaten');
+        
+        hideAllPages();
+    
+        page.style.display = 'none';
+    }  */
+
+    i = i + 1;
+    antwoord();
 }
 
-if (aantalVragen.length > 20) aantalVragen.length = 20;
-function showresultatenPage() {
-    var page = document.getElementById('page-Resultaten');
-    
-    hideAllPages();
-
-    page.style.display = 'block';
-};    
-    /**
-    * Intialize
-    */
-    addButtonActions();
-    showStartPage();
-    antwoord();
+/**
+* Intializes
+*/
+addButtonActions();
+showStartPage();
+antwoord();
