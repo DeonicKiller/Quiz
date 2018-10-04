@@ -95,7 +95,9 @@ nav {
 
     .btn-width-wrapper{
     display:inline-block;
-    min-width:1400px;}
+    width:1400px;
+    max-width: 100%;
+}
 
 body {
     background-image: url(..//afbeeldingen/901.jpg);
