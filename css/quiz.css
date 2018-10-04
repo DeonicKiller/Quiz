@@ -53,15 +53,14 @@ nav {
 #button-start {
     font-weight: bold;
     border-radius:12px;
-    border:2px solid darkblue;
-    background-color:rgb(34, 70, 71);
-    padding:10px;
-    color: white;
-    font-size: 20px;
-    border: 1px solid;
+    border-top: hidden;
+    border-bottom: hidden;
+    background-color:rgba(34, 70, 71, 0);
+    color: whitesmoke;
+    font-size: 40px;
     padding: 10px;
-    box-shadow: 5px 10px #1a1818;
-    margin: 10px;
+    margin-top: 0px;
+    margin-bottom: 20px;
 }
 
 #button-questions {
@@ -86,7 +85,7 @@ nav {
     
     border-radius:12px;
     border:2px solid darkblue;
-    background-color:rgb(47, 34, 51);
+    background: linear-gradient( red, rgba(155, 134, 15, 0.63));
     padding:50px;
     color: white;
     font-size: 20px;
