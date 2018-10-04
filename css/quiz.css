@@ -33,6 +33,7 @@ p{
     color: white;
     font-size:30px;
     text-shadow: 2px 2px 4px #000000;
+    margin-bottom: 0px;
 }
 
 
@@ -44,7 +45,7 @@ nav {
 .page {
     border-width: 4px;
     border-color: red;
-    background: rgba(34, 33, 33, 0.521);
+    background: linear-gradient( rgba(34, 33, 33, 0.521), rgba(34, 33, 33, 0.8));
     border-style: solid;
     text-align: center;
     border-radius: 12px;
@@ -67,12 +68,12 @@ nav {
 #button-questions {
     font-weight: bold;
     border-radius:12px;
-    border:2px solid darkblue;
-    background-color:rgb(34, 70, 71);
+    border-top: hidden;
+    border-bottom: hidden;
+    background-color:rgba(34, 70, 71, 0);
     padding:10px;
     color: white;
     font-size: 20px;
-    border: 1px solid;
     padding: 10px;
     box-shadow: 5px 10px #1a1818;
     margin: 10px;
