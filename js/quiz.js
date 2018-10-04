@@ -54,7 +54,7 @@ function keuze(nummer) {
         page.style.display = 'block';
         scoreEl.innerHTML = (score);
 
-    }  else {
+    } else {
         i = i + 1;
         antwoord();   
     } 
@@ -118,17 +118,46 @@ function showAntwoordPage() {
     page.style.display = 'block';
 
 }
+
 /**
- * Show Resultaten Page
+ * Check student number using the API
  */
-/*function showresultatenPage() {
-    var page = document.getElementById('page-Resultaten');
-    
-    hideAllPages();
+function checkStudent(number) {
+    var xHttp = new XMLHttpRequest();
+    xHttp.onreadystatechange = function () {
+    if (xHttp.readyState == XMLHttpRequest.DONE) {
+            var response = JSON.parse(xHttp.response);
+    if (xHttp.status == 200) {
+        studentIdentificationSucces(response);
+    } else {
+        studentIdentificationFailed(response);
+            }
+        }
+    };
+    xHttp.onerror = function () {
+        studentIdentificationFailed(xHttp.statusText);
+    };
+    xHttp.open("GET", "https://quiz.clow.nl/v1/student/" + number, true);
+    xHttp.send();
+}
 
-    page.style.display = 'block';
+/**
+ * Student is successfully identified
+ */
+function studentIdentificationSucces(student) {
+    console.info(student); // Een Javascript-object met studentnummer, voornaam en achternaam
 
-}*/
+    // Schrijf hier de code die uitgevoerd moet worden als het studentnummer klopt
+}
+
+/**
+ * Student number is incorrect
+ */
+function studentIdentificationFailed(errorMessage) {
+    console.error(errorMessage);
+
+    // Schrijf hier de code die uitgevoerd moet worden als het studentnummer NIET klopt
+}
 
 /**
 * Antwoorden

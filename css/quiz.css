@@ -63,6 +63,15 @@ nav {
     margin-bottom: 20px;
 }
 
+#button-start:hover{
+    padding: 15px;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius:100px;
+    border-bottom-left-radius:100px;
+    border-top-right-radius:100px;
+    transition: ease-in-out;
+}
+
 #button-questions {
     font-weight: bold;
     border-radius:12px;
@@ -74,6 +83,15 @@ nav {
     padding: 10px;
     margin-top: 0px;
     margin-bottom: 20px;
+}
+
+#button-questions:hover{
+    padding: 15px;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius:100px;
+    border-bottom-left-radius:100px;
+    border-top-right-radius:100px;
+    transition: ease-in-out;
 }
 
 .button {
@@ -107,6 +125,10 @@ body {
     text-shadow: 2px 2px 8px rgb(0, 0, 0)
 }
 
+@keyframes button {
+    from{background-color:rgba(34, 70, 71, 0);;} 
+    to{background-color:black;}
+}
 
 
 
