@@ -50,6 +50,11 @@ nav {
     border-radius: 12px;
 }
 
+@media(max-width: 768px) {
+    .page {
+        border: none;
+    }
+}
 #button-start {
     font-weight: bold;
     border-radius:12px;
@@ -81,7 +86,8 @@ nav {
 
 .button {
     height:20px; 
-    width:600px; 
+    max-width:100%; 
+    width: 600px;
     margin: 10px; 
     position:relative;
     
