@@ -70,6 +70,8 @@ function antwoord() {
     var antwoordButtondrie = document.getElementById('button-3');
     var antwoordButtonvier = document.getElementById('button-4');
     var scoreEl = document.getElementById("scoreQuiz1");
+    var vraagElement = document.getElementById("vraag");
+    var vraagAndersElement = document.getElementById("vraagVerandering");
     vraagElement.innerHTML = (aantalVragen[i]);
     antwoordButtoneen.innerHTML = (antwoordLijst[i] [0]);
     antwoordButtontwee.innerHTML = (antwoordLijst[i] [1]);
@@ -131,8 +133,6 @@ function showAntwoordPage() {
 /**
 * Antwoorden
 */
-var vraagElement = document.getElementById("vraag");
-var vraagAndersElement = document.getElementById("vraagVerandering");
 var kies = [1, 2, 3, 4];
 var juiste = [0, 1, 3, 2, 3, 1, 1, 3, 0, 0, 2, 3, 1, 0, 2, 3, 0, 1, 2, 1  ];
 var i = 0;
