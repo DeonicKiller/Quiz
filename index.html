@@ -2,59 +2,65 @@
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Marco's quiz</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/quiz.css">
-    </head>
-    <body>
-        <div class= "header">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Marco's quiz</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/quiz.css">
+</head>
+
+<body>
+    <div class="header">
         <h1>Welkom bij de ORI Quiz van Marco</h1>
-        </div>
-        <nav>
-            <button id="button-start">Home</button>
-            
-        </nav>
-        <main>
-            <div class="page" id="page-start">
+    </div>
+    <nav>
+        <button id="button-start">Home</button>
+        <input type="text" required placeholder="s1234567" name="studentnummer" id="studentnummer">
+        <button id="checkbutton">Controleer studentnummer</button>
 
-                <h2 id= "uitleg"> Uitleg quiz</h2>
+    </nav>
+    <main>
+        <div class="page" id="page-start">
 
-                <p>Speel de quiz en test je kennis over HTML, CSS en JavaScript!<br>In deze quiz beantwoord je 9 multiple choice vragen over HTML<br>en 5 multiple choice vragen over CSS en 6 vragen over JavaScript.</p>
-                <p>Om de quiz te kunnen spellen moet je op vragen drukken.
+            <h2 id="uitleg"> Uitleg quiz</h2>
+
+            <p>Speel de quiz en test je kennis over HTML, CSS en JavaScript!<br>In deze quiz beantwoord je 9 multiple
+                choice vragen over HTML<br>en 5 multiple choice vragen over CSS en 6 vragen over JavaScript.</p>
+            <p>Om de quiz te kunnen spellen moet je op vragen drukken.
                 <br><b>DURF JIJ HET AAN!!</b><br>De quiz duurt ongeveer 15 min</p>
-                <button id="button-questions">Klik hier om de quiz te Beginnen</button>
-            </div>
-            <div>
+            <button id="button-questions">Klik hier om de quiz te Beginnen</button>
+        </div>
+        <div>
 
-            </div>
-            
-           
-                    
-            <div  class="page" id="page-Antwoord"> 
-                
-                <h2 id='vraag'>Vraag 1/20</h2>
-                            <br> 
-                <p class= "page1" id="vraagVerandering">Waar gebruik je HTML voor?<p> 
-                                
-                <button class= "button" id="button-1"></button>
-                <button class= "button" id="button-2"></button>
-                            <br>
-                <button class= "button" id="button-3"></button>
-                <button class= "button" id="button-4"></button>
-                <p id="scoreQuiz1"></p>
-            </div>
+        </div>
 
-            <div class="page" id="page-Resultaten">
-                
-                <h2 id= "resultaat">Einde van de quiz</h2>
-                <p id="scoreQuiz2"></p>
-            </div>
-                            
-        </main>
-        <script src="js/quiz.js"></script>
-    </body>
+
+
+        <div class="page" id="page-Antwoord">
+
+            <h2 id='vraag'>Vraag 1/20</h2>
+            <br>
+            <p class="page1" id="vraagVerandering">Waar gebruik je HTML voor?<p>
+
+                    <button class="button" id="button-1"></button>
+                    <button class="button" id="button-2"></button>
+                    <br>
+                    <button class="button" id="button-3"></button>
+                    <button class="button" id="button-4"></button>
+                    <p id="scoreQuiz1"></p>
+        </div>
+
+        <div class="page" id="page-Resultaten">
+
+            <h2 id="resultaat">Einde van de quiz</h2>
+            <p id="scoreQuiz2"></p>
+        </div>
+
+    </main>
+    <script src="js/quiz.js"></script>
+</body>
+
 </html>

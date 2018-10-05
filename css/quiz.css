@@ -119,6 +119,11 @@ body {
     background-image: url(..//afbeeldingen/901.jpg);
 }
 
+#checkbutton {
+    max-width:100%;
+    width: 200px;
+}
+
 .page1{
     color:rgb(141, 20, 20);
     font-size:40px;
