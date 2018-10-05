@@ -52,7 +52,7 @@ function keuze(nummer) {
         hideAllPages();
     
         page.style.display = 'block';
-        scoreEl.innerHTML = (score);
+        scoreEl.innerHTML = "score:" + " "+ (score);
 
     } else {
         i = i + 1;
