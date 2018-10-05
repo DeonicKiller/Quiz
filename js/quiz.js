@@ -78,7 +78,7 @@ function antwoord() {
     antwoordButtondrie.innerHTML = (antwoordLijst[i] [2]);
     antwoordButtonvier.innerHTML = (antwoordLijst[i] [3]);
     vraagAndersElement.innerHTML = (vragen[i]);
-    scoreEl.innerHTML = (score);
+    scoreEl.innerHTML = "score:" + " "+ (score);
 }
 
 /**
@@ -165,7 +165,7 @@ function studentIdentificationFailed(errorMessage) {
 var kies = [1, 2, 3, 4];
 var juiste = [0, 1, 3, 2, 3, 1, 1, 3, 0, 0, 2, 3, 1, 0, 2, 3, 0, 1, 2, 1  ];
 var i = 0;
-var score =0;
+var score = 0;
                 
 /**
 * Array's
