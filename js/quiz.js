@@ -174,6 +174,7 @@ function saveResultaten() {
     var xHttp = new XMLHttpRequest();
     xHttp.onreadystatechange = function () {
         if (xHttp.readyState == XMLHttpRequest.DONE) {
+            var response = JSON.parse(xHttp.response);
         if (xHttp.status == 200) {
                 saveresultSucced(response);
       } else {
@@ -181,7 +182,7 @@ function saveResultaten() {
             }
         }
     };
-    xHttp.onerror = function (response) {
+    xHttp.onerror = function () {
         //studentIdentificationFailed(xHttp.statusText);
     };
     xHttp.open("POST", "https://quiz.clow.nl/v1/score" + studentNummer, true);
