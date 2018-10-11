@@ -185,13 +185,13 @@ function saveResultaten() {
     xHttp.onerror = function () {
         //studentIdentificationFailed(xHttp.statusText);
     };
-    xHttp.open("POST", "https://quiz.clow.nl/v1/score" + studentNummer, true);
+    xHttp.open("POST", "https://quiz.clow.nl/v1/score",true);
     xHttp.send(
         JSON.stringify( {
             quizMaster: Master,
-            Student : studentNummer,
+            Student: studentNummer,
             points: score,
-            time : 0,
+            time: 0
         } )
     );
  }
