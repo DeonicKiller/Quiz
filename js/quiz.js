@@ -14,7 +14,7 @@ function addButtonActions() {
         showStartPage();
     });
     questionsButton.addEventListener("click", function () {
-        showAntwoordPage();
+        alert("Graag Inloggen");
     });
     antwoordButtoneen.addEventListener("click", function () {
         keuze(1);
@@ -126,7 +126,8 @@ function showAntwoordPage() {
  * Check student number using the API
  */
 function checkStudent() {
-    var studentNummer = document.getElementById('studentnummerText').value;
+    
+    var studentNummer = document.getElementById('studentnummer').value;
     var xHttp = new XMLHttpRequest();
     xHttp.onreadystatechange = function () {
         if (xHttp.readyState == XMLHttpRequest.DONE) {
@@ -143,29 +144,35 @@ function checkStudent() {
     };
     xHttp.open("GET", "https://quiz.clow.nl/v1/student/" + studentNummer, true);
     xHttp.send();
+    
 }
 
 /**
  * Student is successfully identified
  */
 function studentIdentificationSucces(student) {
-    //console.info(student); // Een Javascript-object met studentnummer, voornaam en achternaam
-    var voornaam = student.firstname;
-    var achterNaam = student.lastname;
-
-    alert("welkom" + "" + voornaam + "" + achterNaam);
-    //console.log("De waarde is: " + studentNummerInput.value);
+    var voornaam = student.firstName;
+    var achterNaam = student.lastName;
+    var page = document.getElementById('page-Antwoord');
     
+    hideAllPages();
 
+    page.style.display = 'block';
+    
+    alert("welkom" + " " + voornaam + " " + achterNaam);
+
+    var naamVragenquiz =document.getElementById("NaamVerschijning")
+
+    naamVragenquiz.innerHTML = (student.firstName + " " + student.lastName);
+    
 }
 
 /**
  * Student number is incorrect
  */
-function studentIdentificationFailed(errorMessage) {
-    console.error(errorMessage);
-
-    // Schrijf hier de code die uitgevoerd moet worden als het studentnummer NIET klopt
+function studentIdentificationFailed() {
+   
+alert("Foute inlog gegevens");
 }
 
 /**
