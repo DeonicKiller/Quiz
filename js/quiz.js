@@ -163,7 +163,7 @@ function studentIdentificationSucces(student) {
 
     var naamVragenquiz =document.getElementById("NaamVerschijning")
 
-    naamVragenquiz.innerHTML = (student.firstName + " " + student.lastName);
+    naamVragenquiz.innerHTML = "Succes met de Quiz" + " " + (student.firstName + " " + student.lastName);
     
 }
 
