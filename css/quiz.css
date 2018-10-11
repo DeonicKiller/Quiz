@@ -109,6 +109,12 @@ nav {
     font-size: 20px;
     }
 
+.button:hover{
+    color: white;
+    background: green;
+
+}
+
 .btn-width-wrapper{
     display:inline-block;
     width:1400px;
