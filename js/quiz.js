@@ -56,10 +56,11 @@ function keuze(nummer) {
 
         page.style.display = 'block';
         scoreEl.innerHTML = "score:" + " " + (score);
-
+        saveResultaten();
     } else {
         i = i + 1;
         antwoord();
+        saveResultaten();
     }
 
 }
@@ -113,14 +114,6 @@ function showStartPage() {
 /**
  * Show Antwoord page
  */
-function showAntwoordPage() {
-    var page = document.getElementById('page-Antwoord');
-
-    hideAllPages();
-
-    page.style.display = 'block';
-
-}
 
 /**
  * Check student number using the API
@@ -132,9 +125,9 @@ function checkStudent() {
     xHttp.onreadystatechange = function () {
         if (xHttp.readyState == XMLHttpRequest.DONE) {
             var response = JSON.parse(xHttp.response);
-            if (xHttp.status == 200) {
+        if (xHttp.status == 200) {
                 studentIdentificationSucces(response);
-            } else {
+      } else {
                 studentIdentificationFailed(response);
             }
         }
@@ -161,7 +154,7 @@ function studentIdentificationSucces(student) {
     
     alert("welkom" + " " + voornaam + " " + achterNaam);
     
-    var naamVragenquiz =document.getElementById("NaamVerschijning")
+    var naamVragenquiz =document.getElementById("NaamVerschijning");
     
     naamVragenquiz.innerHTML = "Succes met de Quiz" + " " + (student.firstName + " " + student.lastName);
     
@@ -181,15 +174,14 @@ function saveResultaten() {
     var xHttp = new XMLHttpRequest();
     xHttp.onreadystatechange = function () {
         if (xHttp.readyState == XMLHttpRequest.DONE) {
-            var response = JSON.parse(xHttp.response);
-            if (xHttp.status == 200) {
-                SaveresultSucced(response);
-            } else {
+        if (xHttp.status == 200) {
+                saveresultSucced(response);
+      } else {
                 saveresultFailed(response);
             }
         }
     };
-    xHttp.onerror = function () {
+    xHttp.onerror = function (response) {
         //studentIdentificationFailed(xHttp.statusText);
     };
     xHttp.open("POST", "https://quiz.clow.nl/v1/score" + studentNummer, true);
@@ -206,20 +198,17 @@ function saveResultaten() {
 
 
 /**
- * Student is successfully identified
+ * Resultaat van de quiz met succes opgeslagen
  */
-function saveresultSucced(response) {
-    
-    
-    
-    
+function saveresultSucced() {
+    console.info(alert("Succes"));
 }
 
 /**
- * Student number is incorrect
+ * Resultaat van de quiz niet opgeslagen
  */
 function saveresultFailed() {
-    
+    console.info(alert("Failed"));  
 
 }
 
@@ -273,11 +262,3 @@ addButtonActions();
 showStartPage();
 antwoord();
 
-/*xHttp.send();"POST", "https://quiz.clow.nl/v1/score",
-JSON.stringify( {
-    quizMaster: Master,
-    Student : studentNummer,
-    points: score,
-    time : 0,
-} )
-);*/
