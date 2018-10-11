@@ -111,7 +111,7 @@ nav {
 
 .button:hover{
     color: white;
-    background: green;
+    background: linear-gradient( rgb(0, 128, 0), rgb(16, 27, 16));
 
 }
 
