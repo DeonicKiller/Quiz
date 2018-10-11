@@ -143,40 +143,9 @@ function checkStudent() {
         //studentIdentificationFailed(xHttp.statusText);
     };
     xHttp.open("GET", "https://quiz.clow.nl/v1/student/" + studentNummer, true);
-    xHttp.send(
-    );
+    xHttp.send();
     
 }
-
-function saveResultaten() {
-    
-    var studentNummer = document.getElementById('studentnummer').value;
-    var xHttp = new XMLHttpRequest();
-    xHttp.onreadystatechange = function () {
-        if (xHttp.readyState == XMLHttpRequest.DONE) {
-            var response = JSON.parse(xHttp.response);
-            if (xHttp.status == 200) {
-                studentIdentificationSucces(response);
-            } else {
-                studentIdentificationFailed(response);
-            }
-        }
-    };
-    xHttp.onerror = function () {
-        //studentIdentificationFailed(xHttp.statusText);
-    };
-    xHttp.open("POST", "https://quiz.clow.nl/v1/score + studentNummer, true);
-    xHttp.send();"POST", "https://quiz.clow.nl/v1/score",
-        JSON.stringify( {
-            quizMaster: Master,
-            Student : studentNummer,
-            points: score,
-            time : 0,
-} )
-);
-
-
-
 
 /**
  * Student is successfully identified
@@ -204,6 +173,54 @@ function studentIdentificationSucces(student) {
 function studentIdentificationFailed() {
     
     alert("Foute inlog gegevens");
+}
+
+function saveResultaten() {
+    
+    var studentNummer = document.getElementById('studentnummer').value;
+    var xHttp = new XMLHttpRequest();
+    xHttp.onreadystatechange = function () {
+        if (xHttp.readyState == XMLHttpRequest.DONE) {
+            var response = JSON.parse(xHttp.response);
+            if (xHttp.status == 200) {
+                SaveresultSucced(response);
+            } else {
+                saveresultFailed(response);
+            }
+        }
+    };
+    xHttp.onerror = function () {
+        //studentIdentificationFailed(xHttp.statusText);
+    };
+    xHttp.open("POST", "https://quiz.clow.nl/v1/score" + studentNummer, true);
+    xHttp.send(
+        JSON.stringify( {
+            quizMaster: Master,
+            Student : studentNummer,
+            points: score,
+            time : 0,
+        } )
+    );
+ }
+
+
+
+/**
+ * Student is successfully identified
+ */
+function saveresultSucced(response) {
+    
+    
+    
+    
+}
+
+/**
+ * Student number is incorrect
+ */
+function saveresultFailed() {
+    
+
 }
 
 /**
