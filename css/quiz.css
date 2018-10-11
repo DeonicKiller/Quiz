@@ -69,7 +69,7 @@ nav {
     border-bottom-right-radius:100px;
     border-bottom-left-radius:100px;
     border-top-right-radius:100px;
-    transition: ease-in-out;
+    color: red;
 }
 
 #button-questions {
@@ -91,7 +91,7 @@ nav {
     border-bottom-right-radius:100px;
     border-bottom-left-radius:100px;
     border-top-right-radius:100px;
-    transition: ease-in-out;
+    
 }
 
 .button {
