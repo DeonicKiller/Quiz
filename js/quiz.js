@@ -60,7 +60,7 @@ function keuze(nummer) {
     } else {
         i = i + 1;
         antwoord();
-        saveResultaten();
+        
     }
 
 }
@@ -189,7 +189,7 @@ function saveResultaten() {
     xHttp.send(
         JSON.stringify( {
             quizMaster: Master,
-            Student: studentNummer,
+            student: studentNummer,
             points: score,
             time: 0
         } )
@@ -202,15 +202,15 @@ function saveResultaten() {
  * Resultaat van de quiz met succes opgeslagen
  */
 function saveresultSucced() {
-    console.info(alert("Succes"));
+    console.info("Succes");
 }
 
 /**
  * Resultaat van de quiz niet opgeslagen
  */
 function saveresultFailed() {
-    console.info(alert("Failed"));  
-
+    console.info("Failed");
+        alert("Failed");  
 }
 
 /**
