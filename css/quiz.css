@@ -99,8 +99,8 @@ nav {
     max-width:100%; 
     width: 600px;
     margin: 10px; 
-    position:relative;
-    
+    position:50px;
+    display:inline-block;
     border-radius:12px;
     border:2px solid darkblue;
     background: linear-gradient( red, rgba(155, 134, 15, 0.63));
@@ -141,8 +141,16 @@ body {
     to{background-color:black;}
 }
 
-
-
+/* For mobile phones: */
+@media only screen and (max-width:500px) {
+    .button, .btn-width-wrapper {
+      max-width: 90%;
+      text-align: center;
+      vertical-align: center;
+      height:150px;
+      
+    }
+}
 
 
 
