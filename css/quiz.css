@@ -143,6 +143,12 @@ body {
     border-radius: 6ps;
 }
 
+#studentnummer, #checkbutton {
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
 @keyframes button {
     from{background-color:rgba(34, 70, 71, 0);;} 
     to{background-color:black;}
@@ -169,6 +175,8 @@ body {
       
     }
 }
+
+
 
 
 
