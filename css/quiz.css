@@ -6,18 +6,18 @@
     padding: 10px;
 }
 
-h1{
+h1 {
     color: red;
 }
 
-h2{ 
+h2 { 
     color: white;
     font-size:50px;
     text-align:left;
     text-shadow: 2px 2px 4px #000000;
 }
 
-#resultaat{
+#resultaat {
     color: white;
     font-size:50px;
     text-align:left;
@@ -25,11 +25,11 @@ h2{
     text-align: center;  
 }
 
-#uitleg{
+#uitleg {
     text-align: center;
 }
 
-p{
+p {
     color: white;
     font-size:30px;
     text-shadow: 2px 2px 4px #000000;
@@ -63,7 +63,7 @@ nav {
     margin-bottom: 20px;
 }
 
-#button-start:hover{
+#button-start:hover {
     padding: 15px;
     border-top-left-radius: 100px;
     border-bottom-right-radius:100px;
@@ -85,13 +85,34 @@ nav {
     margin-bottom: 20px;
 }
 
-#button-questions:hover{
+#button-questions:hover {
     padding: 15px;
     border-top-left-radius: 100px;
     border-bottom-right-radius:100px;
     border-bottom-left-radius:100px;
     border-top-right-radius:100px;
     
+}
+
+#opnieuw {
+    font-weight: bold;
+    border-radius:12px;
+    border-top: hidden;
+    border-bottom: hidden;
+    background-color:rgba(34, 70, 71, 0);
+    color: rgb(131, 32, 37);
+    font-size: 40px;
+    padding: 10px;
+    margin-top: 45px;
+    margin-bottom: 20px; 
+}
+
+#opnieuw:hover {
+    padding: 15px;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius:100px;
+    border-bottom-left-radius:100px;
+    border-top-right-radius:100px; 
 }
 
 .button {
@@ -109,13 +130,13 @@ nav {
     font-size: 20px;
     }
 
-.button:hover{
+.button:hover {
     color: white;
     background: linear-gradient( rgb(0, 128, 0), rgb(16, 27, 16));
 
 }
 
-.btn-width-wrapper{
+.btn-width-wrapper {
     display:inline-block;
     width:1400px;
     max-width: 100%;
@@ -133,7 +154,7 @@ body {
     background: black;
 }
 
-.page1{
+.page1 {
     color:rgb(141, 20, 20);
     font-size:40px;
     text-shadow: 2px 2px 8px rgb(0, 0, 0)

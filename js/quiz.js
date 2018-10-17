@@ -9,6 +9,7 @@ function addButtonActions() {
     var antwoordButtondrie = document.getElementById('button-3');
     var antwoordButtonvier = document.getElementById('button-4');
     var checkButton = document.getElementById("checkbutton");
+    var opnieuwButton = document.getElementById('opnieuw');
     
     startButton.addEventListener("click", function () {
         showStartPage();
@@ -30,6 +31,9 @@ function addButtonActions() {
     });
     checkButton.addEventListener("click", function() {
         checkStudent();
+    });
+    opnieuwButton.addEventListener("click", function() {
+        quizOpnieuw();
     });
 }
 
@@ -65,6 +69,54 @@ function keuze(nummer) {
 
 }
 
+function keuze2(nummer) {
+    var scoreEl = document.getElementById("scoreQuiz2");
+    if (nummer == kies[juiste[i]]) {
+        score = score + 1;
+    } else {
+        score = score + 0;
+    }
+
+    // checken of het nu 21 wordt, bij nee  onderste 2, bij ja zet je vari
+
+    if ((aantalVragen.length - 2) < i) {
+
+        var page = document.getElementById('page-Resultaten');
+
+        hideAllPages();
+
+        page.style.display = 'block';
+        scoreEl.innerHTML = "score:" + " " + (score);
+        saveResultaten();
+    } else {
+        i = i + 1;
+        antwoord();
+        
+    }
+
+}
+
+/**
+ * Opnieuw spelen van de quiz
+ */
+function quizOpnieuw() {
+        
+        score = -1;
+        i= -1;
+        
+        showStartPage();
+        keuze2();
+    
+        document.getElementById('button-1').antwoordButtoneen.innerHTML = (antwoordLijst[i][0]);
+        document.getElementById('button-2').antwoordButtontwee.innerHTML = (antwoordLijst[i][1]);
+        document.getElementById('button-3').antwoordButtondrie.innerHTML = (antwoordLijst[i][2]);
+        document.getElementById('button-4').antwoordButtonvier.innerHTML = (antwoordLijst[i][3]);
+        document.getElementById("scoreQuiz1").scoreEl.innerHTML = "score:" + " " + (score);
+        document.getElementById("vraag").vraagElement.innerHTML = (aantalVragen[i]);
+        document.getElementById("vraagVerandering").vraagAndersElement.innerHTML = (vragen[i]);
+    
+}
+
 /**
 * Verandering van alles op de vragen pagina
 */
@@ -92,7 +144,7 @@ function hideAllPages() {
     var startPage = document.getElementById('page-start');
     var AntwoordPage = document.getElementById('page-Antwoord');
     var ResultatenPage = document.getElementById('page-Resultaten');
-
+    
     startPage.style.display = 'none';
     AntwoordPage.style.display = 'none';
     ResultatenPage.style.display = 'none';
