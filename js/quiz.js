@@ -15,7 +15,7 @@ function addButtonActions() {
         showStartPage();
     });
     questionsButton.addEventListener("click", function () {
-        alert("Graag Inloggen");
+        alert("Graag inloggen");
     });
     antwoordButtoneen.addEventListener("click", function () {
         keuze(1);
@@ -55,8 +55,10 @@ function keuze(nummer) {
     if ((aantalVragen.length - 2) < i) {
 
         var page = document.getElementById('page-Resultaten');
-
+        clearInterval(tellerObject);
+        alert(sec);
         hideAllPages();
+
 
         page.style.display = 'block';
         scoreEl.innerHTML = "score:" + " " + (score);
@@ -210,6 +212,10 @@ function studentIdentificationSucces(student) {
     
     naamVragenquiz.innerHTML = "Succes met de Quiz" + " " + (student.firstName + " " + student.lastName);
     
+    tellerObject = setInterval(function(){ 
+                                    sec++;
+
+                                }, 1000);
 }
 
 /**
@@ -243,7 +249,7 @@ function saveResultaten() {
             quizMaster: Master,
             student: studentNummer,
             points: score,
-            time: 0
+            time: sec
         } )
     );
  }
@@ -273,6 +279,9 @@ var juiste = [0, 1, 3, 2, 3, 1, 1, 3, 0, 0, 2, 3, 1, 0, 2, 3, 0, 1, 2, 1];
 var i = 0;
 var score = 0;
 var Master = "S1114352";
+var myVar;
+var sec = 0;
+var tellerObject;
 /**
  * Array's
  */
