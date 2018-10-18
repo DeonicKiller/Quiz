@@ -56,7 +56,6 @@ function keuze(nummer) {
 
         var page = document.getElementById('page-Resultaten');
         clearInterval(tellerObject);
-        alert(sec);
         hideAllPages();
 
 
