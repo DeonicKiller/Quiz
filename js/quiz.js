@@ -186,7 +186,7 @@ function checkStudent() {
         }
     };
     xHttp.onerror = function () {
-        //studentIdentificationFailed(xHttp.statusText);
+        studentIdentificationFailed(xHttp.statusText);
     };
     xHttp.open("GET", "https://quiz.clow.nl/v1/student/" + studentNummer, true);
     xHttp.send();
@@ -240,7 +240,7 @@ function saveResultaten() {
         }
     };
     xHttp.onerror = function () {
-        //studentIdentificationFailed(xHttp.statusText);
+        studentIdentificationFailed(xHttp.statusText);
     };
     xHttp.open("POST", "https://quiz.clow.nl/v1/score",true);
     xHttp.send(
@@ -259,15 +259,15 @@ function saveResultaten() {
  * Resultaat van de quiz met succes opgeslagen
  */
 function saveresultSucced() {
-    console.info("Succes");
+    console.info("De gegevens zijn met succes opgeslagen");
 }
 
 /**
  * Resultaat van de quiz niet opgeslagen
  */
 function saveresultFailed() {
-    console.info("Failed");
-        alert("Failed");  
+    console.info("De gegevens zijn niet opgeslagen");
+        alert("De gegevens zijn niet opgeslagen");  
 }
 
 /**
@@ -278,7 +278,6 @@ var juiste = [0, 1, 3, 2, 3, 1, 1, 3, 0, 0, 2, 3, 1, 0, 2, 3, 0, 1, 2, 1];
 var i = 0;
 var score = 0;
 var Master = "S1114352";
-var myVar;
 var sec = 0;
 var tellerObject;
 /**
